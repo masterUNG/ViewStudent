@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "207151841933",
+    "project_id": "viewstudent-81514",
+    "storage_bucket": "viewstudent-81514.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207151841933:android:1bc76a39358343a17258c4",
+        "android_client_info": {
+          "package_name": "com.flutterthailand.viewstudent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207151841933-0r4codr1vujsgkg2060kugmn2nnaukel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIn99GV3hwGMOl36giiVx6IILbyxBhoEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "207151841933-0r4codr1vujsgkg2060kugmn2nnaukel.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
