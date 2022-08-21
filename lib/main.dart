@@ -14,7 +14,14 @@ String? keyState;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp().then((value) {
+  await Firebase.initializeApp(
+    // options: const FirebaseOptions(
+    //   apiKey: "AIzaSyAMJ2rnHbcfxite_2ggunbpQXLL50LOf2w", // Your apiKey
+    //   appId: "1:207151841933:web:3654fee96c62456d7258c4", // Your appId
+    //   messagingSenderId: "207151841933", // Your messagingSenderId
+    //   projectId: "viewstudent-81514", // Your projectId
+    // ),
+  ).then((value) {
     FirebaseAuth.instance.authStateChanges().listen((event) {
       if (event == null) {
         // SignOut Status
@@ -26,6 +33,8 @@ Future<void> main() async {
         runApp(const MyApp());
       }
     });
+  }).catchError((onError) {
+    print('onError ===> $onError');
   });
 }
 
@@ -34,11 +43,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp(debugShowCheckedModeBanner: false,
       routes: map,
       initialRoute: keyState,
       theme: ThemeData(
-        appBarTheme: AppBarTheme(backgroundColor: MyConstant.primary,),
+        appBarTheme: AppBarTheme(
+          backgroundColor: MyConstant.primary,
+        ),
       ),
     );
   }
